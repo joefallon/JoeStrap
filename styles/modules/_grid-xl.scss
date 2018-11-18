@@ -1,0 +1,11 @@
+/* _grid-lg.scss */
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+@import "variables";
+@import "../mixins/grid-framework";
+
+@media (min-width: $screen-xl-min) {
+    @include jtf-make-grid(xl);
+}
+

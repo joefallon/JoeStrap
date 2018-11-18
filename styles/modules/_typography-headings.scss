@@ -1,0 +1,44 @@
+/* _typography-headings.scss */
+@import "variables";
+
+h1, h2, h3, h4, h5, h6 {
+    color:       $headings-color;
+    font-family: $headings-font-family;
+    line-height: $headings-line-height;
+    margin:      0;
+    padding:     0;
+}
+
+h1 {
+    font-size:      floor($font-size-base * 6);  // 6em
+    letter-spacing: -1.5px;
+    font-weight:    lighter;
+}
+
+h2 {
+    font-size:      floor($font-size-base * 3.75);  // 3.75em
+    letter-spacing: -0.5px;
+    font-weight:    lighter;
+}
+
+h3 {
+    font-size:   floor($font-size-base * 3);  // 3em
+    font-weight: normal;
+}
+
+h4 {
+    font-size:   floor($font-size-base * 2.125);  // 2.125em
+    letter-spacing: 0.25px;
+    font-weight: normal;
+}
+
+h5 {
+    font-size:   floor($font-size-base * 1.5);  // 1.5em
+    font-weight: normal;
+}
+
+h6 {
+    font-size: floor($font-size-base * 1.25);  // 1.25em
+    letter-spacing: 0.15px;
+    font-weight: normal;
+}

@@ -1,0 +1,71 @@
+@import "./_colors.scss";
+
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif;
+$font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+$font-size-base:          16px;
+$font-size-large:         18px;
+$font-size-small:         14px;
+
+$line-height-base:     ($font-size-base * 1.5); // Material Design
+
+$headings-font-family: inherit;
+$headings-line-height: 1.1;
+$headings-color:       rgba(0, 0, 0, 0.87);
+
+$pre-scrollable-max-height: 340px;
+
+$padding-base-vertical:   6px;
+$padding-base-horizontal: 12px;
+
+$border-radius-base:  4px;
+
+// Tables
+$table-cell-padding:           8px;
+$table-condensed-cell-padding: 4px;
+$table-bg:                     transparent;
+
+// Buttons
+$btn-font-weight: normal;
+$btn-border-radius-base: 4px;
+
+//** Default `.form-control` border radius
+$input-border-radius: 4px;
+
+// Default `.form-control` height
+$input-height-base: floor($line-height-base * 1.4);
+
+$form-group-margin-bottom: 16px; // `.form-group` margin
+$cursor-disabled: not-allowed;   // Disabled cursor for form controls and buttons.
+
+// Define the breakpoints at which your layout will change, adapting to different screen sizes.
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+$screen-xl-min: 1800px;
+
+// Provide a maximum to prevent overlap.
+$screen-xs-max: ($screen-sm-min - 1);
+$screen-sm-max: ($screen-md-min - 1);
+$screen-md-max: ($screen-lg-min - 1);
+$screen-lg-max: ($screen-xl-min - 1);
+
+$grid-columns: 12;      // Number of columns in the grid.
+$grid-gutter-width: 0;  // Padding between columns. Gets divided in half for the left and right.
+
+// Define the maximum width of `.container` for different screen sizes.
+$container-sm: (720px  + $grid-gutter-width);
+$container-md: (940px  + $grid-gutter-width);
+$container-lg: (1140px + $grid-gutter-width);
+$container-xl: (1720px + $grid-gutter-width);
+
+$alert-padding:          16px;
+$alert-border:           1px solid transparent;
+$alert-border-radius:    2px;
+
+$badge-font-weight:   bold;
+$badge-line-height:   1;
+$badge-border-radius: 10px;
+
+$dl-horizontal-offset:     180px; // Width of horizontal description list titles.
+$dl-horizontal-breakpoint: 768px; // Point at which .dl-horizontal becomes horizontal.

@@ -1,0 +1,10 @@
+/* _grid-sm.scss */
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones to tablets.
+@import "variables";
+@import "../mixins/grid-framework";
+
+@media (min-width: $screen-sm-min) {
+    @include jtf-make-grid(sm);
+}

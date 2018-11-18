@@ -1,0 +1,21 @@
+/* _toggling-content.scss */
+
+.show, .visible {
+    display: block !important;
+}
+
+.hidden, .hide {
+    display: none !important;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.text-hide {
+    font: 0/0 a;
+    color: transparent;
+    text-shadow: none;
+    background-color: transparent;
+    border: 0;
+}

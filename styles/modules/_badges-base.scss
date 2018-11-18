@@ -1,0 +1,38 @@
+/* _badges-base.scss */
+@import "variables";
+
+.badge {
+    display:          inline-block;
+    min-width:        10px;
+    padding:          3px 7px;
+    margin:           0 5px 0 5px;
+    font-size:        $font-size-small;
+    font-weight:      $badge-font-weight;
+    color:            $white;
+    line-height:      $badge-line-height;
+    vertical-align:   middle;
+    white-space:      nowrap;
+    text-align:       center;
+    background-color: $grey-darken-1;
+    border-radius:    $badge-border-radius;
+
+    // Empty badges collapse automatically (not available in IE8)
+    &:empty {
+        display: none;
+    }
+
+    // Quick fix for badges in buttons
+    .btn & {
+        position: relative;
+        top:      -1px;
+    }
+}
+
+// Hover state for links
+a.badge {
+    &:hover, &:focus {
+        color:           $white;
+        text-decoration: none;
+        cursor:          pointer;
+    }
+}
