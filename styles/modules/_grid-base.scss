@@ -25,9 +25,9 @@
     }
 
     /* default bootstrap large size breakpoint: 1800px */
-    //@media (min-width: $screen-xl-min) {
-    //    width: $container-xl;
-    //}
+    @media (min-width: $screen-xl-min) {
+        width: $container-xl;
+    }
 }
 
 // Fluid container
@@ -41,7 +41,6 @@
 // Row
 //
 // Rows contain and clear the floats of your columns.
-
 .row {
     margin-left:  ceil(calc($grid-gutter-width / -2));
     margin-right: floor(calc($grid-gutter-width / -2));
