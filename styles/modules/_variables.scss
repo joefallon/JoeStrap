@@ -33,7 +33,7 @@ $btn-border-radius-base: 4px;
 $input-border-radius: 4px;
 
 // Default `.form-control` height
-$input-height-base: floor($line-height-base * 1.4);
+$input-height-base: floor(calc($line-height-base * 1.4));
 
 $form-group-margin-bottom: 16px; // `.form-group` margin
 $cursor-disabled: not-allowed;   // Disabled cursor for form controls and buttons.

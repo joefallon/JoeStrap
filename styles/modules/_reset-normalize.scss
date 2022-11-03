@@ -281,10 +281,10 @@ td, th {
 
 // Reset the box-sizing
 * {
-    @include jtf-box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 *:before, *:after {
-    @include jtf-box-sizing(border-box);
+    box-sizing: border-box;
 }
 

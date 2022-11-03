@@ -24,8 +24,6 @@
     vertical-align:      middle;
     white-space:         nowrap;
 
-    @include jtf-user-select(none);
-
     &, &:active, &.active {
         &:focus, &.focus {
             @include jtf-tab-focus;

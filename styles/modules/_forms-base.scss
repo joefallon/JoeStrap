@@ -33,7 +33,7 @@ label {
 }
 
 input[type="search"] {
-    @include jtf-box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 // Position radios and checkboxes better
@@ -104,7 +104,7 @@ output {
     border: 1px solid $grey-lighten-1;
     border-radius: $input-border-radius;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
-    @include jtf-transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 
     // Customize the `:focus` state to imitate native WebKit styles.
     //@include jtf-form-control-focus;
@@ -185,8 +185,8 @@ input[type="search"] {
 .radio, .checkbox {
     position:      relative;
     display:       block;
-    margin-top:    floor($line-height-base / 4);
-    margin-bottom: floor($line-height-base / 4);
+    margin-top:    floor(calc($line-height-base / 4));
+    margin-bottom: floor(calc($line-height-base / 4));
     min-height:    $line-height-base;
 
     label {
