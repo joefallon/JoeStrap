@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Components</title>
+    <link href="styles/joestrap.css" rel="stylesheet">
+    <link href="styles/thumbnails.css" rel="stylesheet">
+    <link href="styles/image-gallery.css" rel="stylesheet">
+    <link href="styles/image-slider.css" rel="stylesheet">
+    <style>
+        .section-header
+        {
+            margin: 25px 0 25px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="md-12 section-header">
+                <h2>Thumbnail</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="md-12">
+                <div class="thumbnail">
+                    <img src="img/placeholder/thumb-200x100.png" alt="Description of Image">
+                    <div class="thumbnail-caption">Image Caption Here</div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="md-12 section-header">
+                <h2>Image Gallery</h2>
+            </div>
+        </div>
+
+        <div class="row image-gallery-row">
+            <div class="md-4 gallery-item">
+                <img src="img/placeholder/square-200x200.png"
+                     alt="Description of Image"
+                     class="img img-responsive center-block">
+            </div>
+            <div class="md-4 gallery-item">
+                <img src="img/placeholder/square-200x200.png"
+                     alt="Description of Image"
+                     class="img img-responsive center-block">
+            </div>
+            <div class="md-4 gallery-item">
+                <img src="img/placeholder/square-200x200.png"
+                     alt="Description of Image"
+                     class="img img-responsive center-block">
+            </div>
+        </div>
+
+        <div class="row image-gallery-row">
+            <div class="md-4 gallery-item">
+                <img src="img/placeholder/square-200x200.png"
+                     alt="Description of Image"
+                     class="img img-responsive center-block">
+            </div>
+            <div class="md-4 gallery-item">
+                <img src="img/placeholder/square-200x200.png"
+                     alt="Description of Image"
+                     class="img img-responsive center-block">
+            </div>
+            <div class="md-4 gallery-item">
+                <img src="img/placeholder/square-200x200.png"
+                     alt="Description of Image"
+                     class="img img-responsive center-block">
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="md-12 section-header">
+                <h2>Image Slider</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="image-slider">
+                <div class="slide" id="slide1">
+                    <img src="img/placeholder/kitten-400x500.jpg" alt="Description of Image 1">
+                </div>
+                <div class="slide" id="slide2">
+                    <img src="img/placeholder/puppy-400x500.jpg" alt="Description of Image 2">
+                </div>
+                <!-- ... More slides -->
+                <button id="prevSlide">Previous</button>
+                <button id="nextSlide">Next</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="components.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+/* image-gallery.scss */
+
+.image-gallery-row {
+}
+
+.gallery-item {
+    margin: 25px 0 25px 0;
+}
+
+.gallery-item img {
+    transition: .3s ease-in-out;
+    margin: 0 auto;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
