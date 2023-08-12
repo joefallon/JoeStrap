@@ -1,0 +1,18 @@
+/* thumbnails.scss */
+.thumbnail {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 10px;
+  overflow: hidden;
+}
+
+.thumbnail img {
+  width: 100%;
+  display: block;
+}
+
+.thumbnail-caption {
+  text-align: center;
+  padding: 10px;
+  background-color: #f5f5f5;
+}

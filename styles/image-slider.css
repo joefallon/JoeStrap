@@ -1,0 +1,16 @@
+/* image-slider.scss */
+.image-slider {
+  position: relative;
+  overflow: hidden;
+  width: 50%; /* Or any other preferred width */
+  margin: 20px auto;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+}
+
+.slide img {
+  width: 100%;
+}
