@@ -1,0 +1,18 @@
+/* contact-us-1.scss */
+
+.contact-us-1-row {
+    background-color: #caffd8;
+
+    display: flex;
+    align-items: flex-end; /* Align items to the bottom */
+}
+
+.contact-us-1-col {
+
+}
+
+@media (max-width: 768px) {
+    .contact-us-1-row {
+        flex-direction: column;
+    }
+}

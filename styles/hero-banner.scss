@@ -1,0 +1,20 @@
+/* hero-banner.scss */
+
+.hero-banner {
+    background-image: url('../img/placeholder/background-1366x768.png');
+
+    /* This will ensure that the image covers the full width and height of the div */
+    background-size: cover;
+
+    /* This will center the image within the div */
+    background-position: center;
+
+    /* This ensures the image doesn't repeat */
+    background-repeat: no-repeat;
+
+    /* This makes sure the height remains proportional to the width of the viewport */
+    height: calc(100vw * (768 / 1366));
+
+    /* This will make the div span the full width of the viewport */
+    width: 100%;
+}
