@@ -1,10 +1,10 @@
 /* _horizontal-rule.scss */
-@import "variables";
+@use "./variables.scss" as variables;
+@use "./_colors.scss" as colors;
 
 hr {
-    margin-top: $line-height-base;
-    margin-bottom: $line-height-base;
+    margin-top: variables.$line-height-base;
+    margin-bottom: variables.$line-height-base;
     border: 0;
-    border-top: 1px solid $grey-lighten-3;
+    border-top: 1px solid colors.$grey-lighten-3;
 }
-

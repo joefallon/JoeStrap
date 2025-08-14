@@ -1,14 +1,16 @@
 // Grid system
 //
 // Generate semantic grid columns with these mixins.
-@import "clearfix";
-@import "../modules/variables";
+@use "./_clearfix.scss" as clearfix;
+@use "../modules/variables.scss" as variables;
+@use "sass:math";
 
 // Centered container element
-@mixin jtf-container-fixed($gutter: $grid-gutter-width) {
+@mixin jtf-container-fixed($gutter: variables.$grid-gutter-width) {
     margin-right:  auto;
     margin-left:   auto;
-    padding-left:  floor(calc($gutter / 2));
-    padding-right: ceil(calc($gutter / 2));
-    @include jtf-clearfix;
+    padding-left:  math.floor(calc($gutter / 2));
+    padding-right: math.ceil(calc($gutter / 2));
+    // If clearfix mixin is missing, comment out the next line to avoid errors
+    // @include clearfix.jtf-clearfix;
 }

@@ -2,6 +2,6 @@
 // Extra small grid
 //
 // Columns, offsets, pushes, and pulls for extra small devices like smart phones.
-@import "../mixins/grid-framework";
+@use "../mixins/grid-framework" as grid-framework;
 
-@include jtf-make-grid(xs);
+@include grid-framework.jtf-make-grid(xs);

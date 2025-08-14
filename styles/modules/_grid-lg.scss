@@ -2,10 +2,9 @@
 // Large grid
 //
 // Columns, offsets, pushes, and pulls for the large desktop device range.
-@import "variables";
-@import "../mixins/grid-framework";
+@use "./variables.scss" as variables;
+@use "../mixins/grid-framework" as grid-framework;
 
-@media (min-width: $screen-lg-min) {
-    @include jtf-make-grid(lg);
+@media (min-width: variables.$screen-lg-min) {
+    @include grid-framework.jtf-make-grid(lg);
 }
-

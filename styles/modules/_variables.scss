@@ -1,72 +1,73 @@
-@import "./_colors-dev.scss";
-@import "./_colors.scss";
+@use "./_colors-dev.scss" as colors-dev;
+@use "./_colors.scss" as colors;
+@use "sass:math";
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif;
-$font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
-$font-size-base:          16px;
-$font-size-large:         18px;
-$font-size-small:         14px;
+$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace !default;
+$font-size-base:          16px !default;
+$font-size-large:         18px !default;
+$font-size-small:         14px !default;
 
-$line-height-base:     ($font-size-base * 1.5); // Material Design
+$line-height-base:     ($font-size-base * 1.5) !default; // Material Design
 
-$headings-font-family: inherit;
-$headings-line-height: 1.2;
-$headings-color:       rgba(0, 0, 0, 0.87);
+$headings-font-family: inherit !default;
+$headings-line-height: 1.2 !default;
+$headings-color:       rgba(0, 0, 0, 0.87) !default;
 
-$pre-scrollable-max-height: 340px;
+$pre-scrollable-max-height: 340px !default;
 
-$padding-base-vertical:   6px;
-$padding-base-horizontal: 12px;
+$padding-base-vertical:   6px !default;
+$padding-base-horizontal: 12px !default;
 
-$border-radius-base:  4px;
+$border-radius-base:  4px !default;
 
 // Tables
-$table-cell-padding:           8px;
-$table-condensed-cell-padding: 4px;
-$table-bg:                     transparent;
+$table-cell-padding:           8px !default;
+$table-condensed-cell-padding: 4px !default;
+$table-bg:                     transparent !default;
 
 // Buttons
-$btn-font-weight: normal;
-$btn-border-radius-base: 4px;
+$btn-font-weight: normal !default;
+$btn-border-radius-base: 4px !default;
 
 //** Default `.form-control` border radius
-$input-border-radius: 4px;
+$input-border-radius: 4px !default;
 
 // Default `.form-control` height
-$input-height-base: floor(calc($line-height-base * 1.4));
+$input-height-base: math.floor(calc($line-height-base * 1.4)) !default;
 
-$form-group-margin-bottom: 16px; // `.form-group` margin
-$cursor-disabled: not-allowed;   // Disabled cursor for form controls and buttons.
+$form-group-margin-bottom: 16px !default; // `.form-group` margin
+$cursor-disabled: not-allowed !default;   // Disabled cursor for form controls and buttons.
 
 // Define the breakpoints at which your layout will change, adapting to different screen sizes.
-$screen-sm-min: 768px;
-$screen-md-min: 992px;
-$screen-lg-min: 1200px;
-$screen-xl-min: 1800px;
+$screen-sm-min: 768px !default;
+$screen-md-min: 992px !default;
+$screen-lg-min: 1200px !default;
+$screen-xl-min: 1800px !default;
 
 // Provide a maximum to prevent overlap.
-$screen-xs-max: ($screen-sm-min - 1);
-$screen-sm-max: ($screen-md-min - 1);
-$screen-md-max: ($screen-lg-min - 1);
-$screen-lg-max: ($screen-xl-min - 1);
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+$screen-lg-max: ($screen-xl-min - 1) !default;
 
-$grid-columns: 12;      // Number of columns in the grid.
-$grid-gutter-width: 0;  // Padding between columns. Gets divided in half for the left and right.
+$grid-columns: 12 !default;      // Number of columns in the grid.
+$grid-gutter-width: 0 !default;  // Padding between columns. Gets divided in half for the left and right.
 
 // Define the maximum width of `.container` for different screen sizes.
-$container-sm: (720px  + $grid-gutter-width);
-$container-md: (940px  + $grid-gutter-width);
-$container-lg: (1140px + $grid-gutter-width);
-$container-xl: (1720px + $grid-gutter-width);
+$container-sm: (720px  + $grid-gutter-width) !default;
+$container-md: (940px  + $grid-gutter-width) !default;
+$container-lg: (1140px + $grid-gutter-width) !default;
+$container-xl: (1720px + $grid-gutter-width) !default;
 
-$alert-padding:          16px;
-$alert-border:           1px solid transparent;
-$alert-border-radius:    2px;
+$alert-padding:          16px !default;
+$alert-border:           1px solid transparent !default;
+$alert-border-radius:    2px !default;
 
-$badge-font-weight:   bold;
-$badge-line-height:   1;
-$badge-border-radius: 10px;
+$badge-font-weight:   bold !default;
+$badge-line-height:   1 !default;
+$badge-border-radius: 10px !default;
 
-$dl-horizontal-offset:     180px; // Width of horizontal description list titles.
-$dl-horizontal-breakpoint: 768px; // Point at which .dl-horizontal becomes horizontal.
+$dl-horizontal-offset:     180px !default; // Width of horizontal description list titles.
+$dl-horizontal-breakpoint: 768px !default; // Point at which .dl-horizontal becomes horizontal.

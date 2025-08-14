@@ -1,17 +1,18 @@
 /* _typography-links.scss */
-@import "variables";
-@import "../mixins/_tab-focus.scss";
+@use "./variables.scss" as variables;
+@use "../mixins/_tab-focus.scss" as tabFocus;
+@use "./_colors.scss" as colors;
 
 a {
-    color:           $light-blue-darken-3;
+    color:           colors.$light-blue-darken-3;
     text-decoration: none;
 
     &:hover, &:focus {
-        color:           $light-blue-darken-4;
+        color:           colors.$light-blue-darken-4;
         text-decoration: underline;
     }
 
     &:focus {
-        @include jtf-tab-focus;
+        @include tabFocus.jtf-tab-focus;
     }
 }

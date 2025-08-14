@@ -2,10 +2,9 @@
 // Medium grid
 //
 // Columns, offsets, pushes, and pulls for the desktop device range.
-@import "variables";
-@import "../mixins/grid-framework";
+@use "./variables.scss" as variables;
+@use "../mixins/grid-framework" as grid-framework;
 
-@media (min-width: $screen-md-min) {
-    @include jtf-make-grid(md);
+@media (min-width: variables.$screen-md-min) {
+    @include grid-framework.jtf-make-grid(md);
 }
-

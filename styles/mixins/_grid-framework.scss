@@ -2,11 +2,13 @@
 //
 // Used only by Bootstrap to generate the correct number of grid classes given
 // any value of `$grid-columns`.
-@import "../modules/variables";
+@use "../modules/variables.scss" as variables;
+@use "sass:math";
+@use "./_clearfix.scss" as clearfix;
 
 // [converter] This is defined recursively in LESS, but Sass supports real loops
 @mixin jtf-make-grid-columns($i: 1, $list: ".xs-#{$i}, .sm-#{$i}, .md-#{$i}, .lg-#{$i}, .xl-#{$i}") {
-    @for $i from (1 + 1) through $grid-columns {
+    @for $i from (1 + 1) through variables.$grid-columns {
         $list: "#{$list}, .xs-#{$i}, .sm-#{$i}, .md-#{$i}, .lg-#{$i}, .xl-#{$i}";
     }
 
@@ -15,14 +17,14 @@
         // Prevent columns from collapsing when empty
         min-height: 1px;
         // Inner gutter via padding
-        padding-left:  ceil(calc($grid-gutter-width / 2));
-        padding-right: floor(calc($grid-gutter-width / 2));
+        padding-left:  calc(#{variables.$grid-gutter-width} / 2);
+        padding-right: calc(#{variables.$grid-gutter-width} / 2);
     }
 }
 
 // [converter] This is defined recursively in LESS, but Sass supports real loops
 @mixin jtf-float-grid-columns($class, $i: 1, $list: ".#{$class}-#{$i}") {
-    @for $i from (1 + 1) through $grid-columns {
+    @for $i from (1 + 1) through variables.$grid-columns {
         $list: "#{$list}, .#{$class}-#{$i}";
     }
 
@@ -34,13 +36,13 @@
 @mixin jtf-calc-grid-column($index, $class, $type) {
     @if ($type == width) and ($index > 0) {
         .#{$class}-#{$index} {
-            width: percentage(calc($index / $grid-columns));
+            width: calc(100% * #{$index} / #{variables.$grid-columns});
         }
     }
 
     @if ($type == push) and ($index > 0) {
         .#{$class}-push-#{$index} {
-            left: percentage(calc($index / $grid-columns));
+            left: calc(100% * #{$index} / #{variables.$grid-columns});
         }
     }
 
@@ -52,7 +54,7 @@
 
     @if ($type == pull) and ($index > 0) {
         .#{$class}-pull-#{$index} {
-            right: percentage(calc($index / $grid-columns));
+            right: calc(100% * #{$index} / #{variables.$grid-columns});
         }
     }
 
@@ -64,7 +66,7 @@
 
     @if ($type == offset) {
         .#{$class}-offset-#{$index} {
-            margin-left: percentage(calc($index / $grid-columns));
+            margin-left: calc(100% * #{$index} / #{variables.$grid-columns});
         }
     }
 }
@@ -79,8 +81,10 @@
 // Create grid for specific class
 @mixin jtf-make-grid($class) {
     @include jtf-float-grid-columns($class);
-    @include jtf-loop-grid-columns($grid-columns, $class, width);
-    @include jtf-loop-grid-columns($grid-columns, $class, pull);
-    @include jtf-loop-grid-columns($grid-columns, $class, push);
-    @include jtf-loop-grid-columns($grid-columns, $class, offset);
+    @include jtf-loop-grid-columns(variables.$grid-columns, $class, width);
+    @include jtf-loop-grid-columns(variables.$grid-columns, $class, pull);
+    @include jtf-loop-grid-columns(variables.$grid-columns, $class, push);
+    @include jtf-loop-grid-columns(variables.$grid-columns, $class, offset);
 }
+
+// To use the clearfix mixin from grid-framework, reference as clearfix.jtf-clearfix

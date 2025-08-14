@@ -1,11 +1,11 @@
 /* _typography-lists.scss */
-@import "variables";
-@import "../mixins/clearfix";
+@use "./variables.scss" as variables;
+@use "../mixins/_clearfix.scss" as clearfix;
 
 // Unordered and Ordered lists
 ul, ol {
     margin-top: 0;
-    margin-bottom: calc($line-height-base / 2);
+    margin-bottom: calc(#{variables.$line-height-base} / 2);
 
     ul, ol {
         margin-bottom: 0;
@@ -40,11 +40,11 @@ ul, ol {
 // Description Lists
 dl {
     margin-top: 0; // Remove browser default
-    margin-bottom: $line-height-base;
+    margin-bottom: variables.$line-height-base;
 }
 
 dt, dd {
-    line-height: $line-height-base;
+    line-height: variables.$line-height-base;
 }
 
 dt {
@@ -62,13 +62,13 @@ dd {
 
 .dl-horizontal {
     dd {
-        @include jtf-clearfix; // Clear the floated `dt` if an empty `dd` is present
+        @include clearfix.jtf-clearfix; // Clear the floated `dt` if an empty `dd` is present
     }
 
-    @media (min-width: $dl-horizontal-breakpoint) {
+    @media (min-width: variables.$dl-horizontal-breakpoint) {
         dt {
             float: left;
-            width: ($dl-horizontal-offset - 20);
+            width: (variables.$dl-horizontal-offset - 20);
             clear: left;
             text-align: right;
             overflow: hidden;
@@ -77,7 +77,7 @@ dd {
         }
 
         dd {
-            margin-left: $dl-horizontal-offset;
+            margin-left: variables.$dl-horizontal-offset;
         }
     }
 }

@@ -4,37 +4,37 @@
  *****************************************************************************/
 
 // Reset
-@import "modules/reset-normalize";
+@use "modules/reset-normalize";
 
 // Grid System
-@import "modules/grid-base";
-@import "modules/grid-xs";
-@import "modules/grid-sm";
-@import "modules/grid-md";
-@import "modules/grid-lg";
-@import "modules/grid-xl";
+@use "modules/grid-base";
+@use "modules/grid-xs";
+@use "modules/grid-sm";
+@use "modules/grid-md";
+@use "modules/grid-lg";
+@use "modules/grid-xl";
 
 // Typography
-@import "modules/typography-alignment";
-@import "modules/typography-code";
-@import "modules/typography-headings";
-@import "modules/typography-links";
-@import "modules/typography-lists";
-@import "modules/typography-paragraphs";
+@use "modules/typography-alignment";
+@use "modules/typography-code";
+@use "modules/typography-headings";
+@use "modules/typography-links";
+@use "modules/typography-lists";
+@use "modules/typography-paragraphs";
 
 // Components
-@import "modules/images";
-@import "modules/horizontal-rule";
-@import "modules/tables-base";
-@import "modules/tables-responsive";
-@import "modules/forms-base";
-@import "modules/buttons-base";
-@import "modules/labels";
-@import "modules/badges-base";
-@import "modules/alerts-base";
-@import "modules/alerts-contextual";
+@use "modules/images";
+@use "modules/horizontal-rule";
+@use "modules/tables-base";
+@use "modules/tables-responsive";
+@use "modules/forms-base";
+@use "modules/buttons-base";
+@use "modules/labels";
+@use "modules/badges-base";
+@use "modules/alerts-base";
+@use "modules/alerts-contextual";
 
 // Utility Classes
-@import "modules/floats";
-@import "modules/toggling-content";
-@import "modules/dev-backgrounds";
+@use "modules/floats";
+@use "modules/toggling-content";
+@use "modules/dev-backgrounds";

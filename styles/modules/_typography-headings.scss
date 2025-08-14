@@ -1,44 +1,45 @@
 /* _typography-headings.scss */
-@import "variables";
+@use "./variables.scss" as variables;
+@use "sass:math";
 
 h1, h2, h3, h4, h5, h6 {
-    color:       $headings-color;
-    font-family: $headings-font-family;
-    line-height: $headings-line-height;
+    color:       variables.$headings-color;
+    font-family: variables.$headings-font-family;
+    line-height: variables.$headings-line-height;
     margin:      0;
     padding:     0;
 }
 
 h1 {
-    font-size:      floor(calc($font-size-base * 2.5));  // 2.5rem
+    font-size:      calc(#{variables.$font-size-base} * 2.5);  // 2.5rem
     letter-spacing: -1.5px;
     font-weight:    lighter;
 }
 
 h2 {
-    font-size:      floor(calc($font-size-base * 2.0));  // 2rem
+    font-size:      calc(#{variables.$font-size-base} * 2.0);  // 2rem
     letter-spacing: -0.5px;
     font-weight:    lighter;
 }
 
 h3 {
-    font-size:   floor(calc($font-size-base * 1.75));  // 1.75rem
+    font-size:   calc(#{variables.$font-size-base} * 1.75);  // 1.75rem
     font-weight: normal;
 }
 
 h4 {
-    font-size:   floor(calc($font-size-base * 1.5));  // 1.5rem
+    font-size:   calc(#{variables.$font-size-base} * 1.5);  // 1.5rem
     letter-spacing: 0.25px;
     font-weight: normal;
 }
 
 h5 {
-    font-size:   floor(calc($font-size-base * 1.25));  // 1.25rem
+    font-size:   calc(#{variables.$font-size-base} * 1.25);  // 1.25rem
     font-weight: normal;
 }
 
 h6 {
-    font-size: floor(calc($font-size-base * 1.0));  // 1rem
+    font-size: calc(#{variables.$font-size-base} * 1.0);  // 1rem
     letter-spacing: 0.15px;
     font-weight: normal;
 }
