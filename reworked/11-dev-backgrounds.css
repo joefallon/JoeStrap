@@ -1,0 +1,27 @@
+/* 11-dev-backgrounds.css */
+
+
+/* _dev-backgrounds.scss */
+.bg-dev-pink {
+    background-color: #ffccff;
+}
+
+.bg-dev-green {
+    background-color: #caffd8;
+}
+
+.bg-dev-orange {
+    background-color: #f9dfc2;
+}
+
+.bg-dev-blue {
+    background-color: #dbf6f6;
+}
+
+.bg-dev-yellow {
+    background-color: #f6f6db;
+}
+
+.bg-dev-purple {
+    background-color: #a8a8ff;
+}

@@ -1,0 +1,59 @@
+/* 08-badges.css */
+
+/*
+ * Refactored and Modernized Badge Styles
+ *
+ * Key Changes:
+ * - Introduced CSS Custom Properties for a fully themeable badge system.
+ * - Grouped related styles for better readability.
+ * - Ensured functional preservation of all original styles.
+ */
+
+:root {
+    /* Base Badge Styles */
+    --badge-color: #ffffff;
+    --badge-bg: #757575;
+    --badge-font-size: 14px;
+    --badge-padding-y: 3px;
+    --badge-padding-x: 7px;
+    --badge-margin-x: 5px;
+    --badge-border-radius: 10px;
+}
+
+/* Base Badge Style
+-------------------------------------------------- */
+
+.badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: var(--badge-padding-y) var(--badge-padding-x);
+    margin: 0 var(--badge-margin-x);
+    font-size: var(--badge-font-size);
+    font-weight: bold;
+    line-height: 1;
+    color: var(--badge-color);
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: var(--badge-bg);
+    border-radius: var(--badge-border-radius);
+}
+
+/* Hide the badge if it has no content */
+.badge:empty {
+    display: none;
+}
+
+/* Positional adjustment when inside a button */
+.btn .badge {
+    position: relative;
+    top: -1px;
+}
+
+/* Styles for linked badges */
+a.badge:hover,
+a.badge:focus {
+    color: var(--badge-color);
+    text-decoration: none;
+    cursor: pointer;
+}

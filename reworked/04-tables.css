@@ -1,0 +1,145 @@
+/* 04-tables.css */
+
+.table {
+    /* CSS Custom Properties for easy theming */
+    --table-bg: transparent;
+    --table-striped-bg: #fafafa;
+    --table-hover-bg: #f5f5f5;
+    --table-border-color: #bdbdbd;
+    --table-caption-color: #757575;
+    --table-cell-padding: 8px;
+    --table-condensed-cell-padding: 4px;
+    --table-margin-bottom: 24px;
+    --table-line-height: 24px;
+
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: var(--table-margin-bottom);
+    background-color: var(--table-bg);
+
+    /* A simpler selector for all table cells */
+
+    th, td {
+        padding: var(--table-cell-padding);
+        line-height: var(--table-line-height);
+        vertical-align: top;
+        text-align: left;
+        border-top: 1px solid var(--table-border-color);
+    }
+
+    thead th {
+        vertical-align: bottom;
+        border-bottom: 2px solid var(--table-border-color);
+    }
+
+    /* Remove top border from the first row in the header */
+
+    thead:first-child tr:first-child th,
+    thead:first-child tr:first-child td {
+        border-top: 0;
+    }
+
+    /* Add a border between consecutive tbody elements */
+
+    tbody + tbody {
+        border-top: 2px solid var(--table-border-color);
+    }
+
+    /* Style for nested tables */
+
+    .table {
+        background-color: #ffffff;
+    }
+}
+
+caption {
+    padding-top: var(--table-cell-padding, 8px);
+    padding-bottom: var(--table-cell-padding, 8px);
+    color: var(--table-caption-color, #757575);
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Modifier Classes */
+
+.table-condensed {
+    th,
+    td {
+        padding: var(--table-condensed-cell-padding);
+    }
+}
+
+.table-bordered {
+    border: 1px solid var(--table-border-color);
+
+    th,
+    td {
+        border: 1px solid var(--table-border-color);
+    }
+
+    thead th,
+    thead td {
+        border-bottom-width: 2px;
+    }
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: var(--table-striped-bg);
+}
+
+.table-hover > tbody > tr:hover {
+    background-color: var(--table-hover-bg);
+}
+
+/* Responsive Wrapper */
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+@media screen and (max-width: 767px) {
+    .table-responsive {
+        width: 100%;
+        margin-bottom: 18px;
+        overflow-y: hidden;
+        border: 1px solid var(--table-border-color, #bdbdbd);
+
+        > .table {
+            margin-bottom: 0;
+
+            th,
+            td {
+                white-space: nowrap;
+            }
+        }
+
+        > .table-bordered {
+            border: 0;
+
+            > thead > tr > th:first-child,
+            > tbody > tr > th:first-child,
+            > tfoot > tr > th:first-child,
+            > thead > tr > td:first-child,
+            > tbody > tr > td:first-child,
+            > tfoot > tr > td:first-child {
+                border-left: 0;
+            }
+
+            > thead > tr > th:last-child,
+            > tbody > tr > th:last-child,
+            > tfoot > tr > th:last-child,
+            > thead > tr > td:last-child,
+            > tbody > tr > td:last-child,
+            > tfoot > tr > td:last-child {
+                border-right: 0;
+            }
+
+            > tbody > tr:last-child > th,
+            > tbody > tr:last-child > td,
+            > tfoot > tr:last-child > th,
+            > tfoot > tr:last-child > td {
+                border-bottom: 0;
+            }
+        }
+    }
+}

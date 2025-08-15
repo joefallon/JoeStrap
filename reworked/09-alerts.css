@@ -1,0 +1,109 @@
+/* 09-alerts.css */
+
+/*
+ * Refactored and Modernized Alert Styles
+ *
+ * Key Changes:
+ * - Introduced CSS Custom Properties for a fully themeable alert system.
+ * - Simplified selectors and grouped related styles for better readability.
+ * - Ensured functional preservation of all original styles.
+ */
+
+:root {
+    /* Base Alert Styles */
+    --alert-padding: 16px;
+    --alert-margin-bottom: 24px;
+    --alert-border-radius: 2px;
+
+    /* Success Alert */
+    --alert-success-bg: #f1f8e9;
+    --alert-success-border: #c5e1a5;
+    --alert-success-color: #33691e;
+    --alert-success-link-color: #204113;
+
+    /* Info Alert */
+    --alert-info-bg: #e1f5fe;
+    --alert-info-border: #81d4fa;
+    --alert-info-color: #01579b;
+    --alert-info-link-color: #013b68;
+
+    /* Warning Alert */
+    --alert-warning-bg: #fffde7;
+    --alert-warning-border: #fff59d;
+    --alert-warning-color: #8d6e63;
+    --alert-warning-link-color: #6f574e;
+
+    /* Error Alert */
+    --alert-error-bg: #ffe6e8;
+    --alert-error-border: #ef9a9a;
+    --alert-error-color: #b71c1c;
+    --alert-error-link-color: #8b1515;
+}
+
+/* Base Alert Style
+-------------------------------------------------- */
+
+.alert {
+    padding: var(--alert-padding);
+    margin-bottom: var(--alert-margin-bottom);
+    border: 1px solid transparent;
+    border-radius: var(--alert-border-radius);
+}
+
+.alert .alert-link {
+    font-weight: bold;
+}
+
+/* Spacing for paragraphs and lists inside alerts */
+.alert > p,
+.alert > ul {
+    margin-bottom: 0;
+}
+
+.alert > p + p {
+    margin-top: 6px;
+}
+
+
+/* Alert Color Variants
+-------------------------------------------------- */
+
+.alert-success {
+    color: var(--alert-success-color);
+    background-color: var(--alert-success-bg);
+    border-color: var(--alert-success-border);
+}
+
+.alert-success .alert-link {
+    color: var(--alert-success-link-color);
+}
+
+.alert-info {
+    color: var(--alert-info-color);
+    background-color: var(--alert-info-bg);
+    border-color: var(--alert-info-border);
+}
+
+.alert-info .alert-link {
+    color: var(--alert-info-link-color);
+}
+
+.alert-warning {
+    color: var(--alert-warning-color);
+    background-color: var(--alert-warning-bg);
+    border-color: var(--alert-warning-border);
+}
+
+.alert-warning .alert-link {
+    color: var(--alert-warning-link-color);
+}
+
+.alert-error {
+    color: var(--alert-error-color);
+    background-color: var(--alert-error-bg);
+    border-color: var(--alert-error-border);
+}
+
+.alert-error .alert-link {
+    color: var(--alert-error-link-color);
+}

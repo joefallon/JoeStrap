@@ -1,0 +1,210 @@
+/* 05-forms.css */
+
+:root {
+    /* Colors */
+    --form-color: #424242;
+    --form-bg: #ffffff;
+    --form-border-color: #bdbdbd;
+    --form-disabled-bg: #eeeeee;
+    --form-placeholder-color: #9e9e9e;
+    --form-legend-color: #212121;
+    --form-legend-border-color: #e0e0e0;
+
+    /* Focus Styles */
+    --form-focus-border-color: #03a9f4;
+    --form-focus-box-shadow-color: rgba(3, 169, 244, 0.6);
+
+    /* Sizing & Spacing */
+    --form-font-size: 16px;
+    --form-line-height: 24px;
+    --form-group-margin-bottom: 16px;
+    --form-control-height: 33px;
+    --form-control-padding-y: 6px;
+    --form-control-padding-x: 12px;
+    --form-border-radius: 4px;
+}
+
+/* Base Resets & Element Styles */
+fieldset {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    min-width: 0; /* Fixes flexbox sizing issues */
+}
+
+legend {
+    display: block;
+    width: 100%;
+    padding: 0;
+    margin-bottom: var(--form-line-height);
+    font-size: 24px;
+    line-height: inherit;
+    color: var(--form-legend-color);
+    border: 0;
+    border-bottom: 1px solid var(--form-legend-border-color);
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Base styles for various input types */
+input[type="search"] {
+    /* Modern standard with prefix for max compatibility */
+    -webkit-appearance: none;
+    appearance: none;
+    box-sizing: border-box;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    margin: 4px 0 0;
+    line-height: normal;
+}
+
+input[type="file"] {
+    display: block;
+}
+
+input[type="range"] {
+    display: block;
+    width: 100%;
+}
+
+select[multiple],
+select[size] {
+    height: auto;
+}
+
+output {
+    display: block;
+    padding-top: 7px;
+    font-size: var(--form-font-size);
+    line-height: var(--form-line-height);
+    color: var(--form-color);
+}
+
+/* .form-control (Primary Input Style) */
+.form-control {
+    display: block;
+    width: 100%;
+    height: var(--form-control-height);
+    padding: var(--form-control-padding-y) var(--form-control-padding-x);
+    font-size: var(--form-font-size);
+    line-height: var(--form-line-height);
+    color: var(--form-color);
+    background: var(--form-bg) none;
+    border: 1px solid var(--form-border-color);
+    border-radius: var(--form-border-radius);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: var(--form-focus-border-color);
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px var(--form-focus-box-shadow-color);
+}
+
+/* Standardized placeholder styling */
+.form-control::placeholder {
+    color: var(--form-placeholder-color);
+    opacity: 1; /* Corrects Firefox's default lower opacity */
+}
+
+/* Removes dropdown arrow in IE/Edge */
+.form-control::-ms-expand {
+    border: 0;
+    background-color: transparent;
+}
+
+/* Disabled and readonly states */
+.form-control[readonly], .form-control:disabled {
+    background-color: var(--form-disabled-bg);
+    opacity: 1;
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+/* Legacy WebKit fix for date/time inputs. Retained for compatibility. */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    input[type="date"].form-control,
+    input[type="time"].form-control,
+    input[type="datetime-local"].form-control,
+    input[type="month"].form-control {
+        line-height: var(--form-control-height);
+    }
+}
+
+/* Form Structure & Groups */
+.form-group {
+    margin-bottom: var(--form-group-margin-bottom);
+}
+
+/* Radios and Checkboxes */
+.radio, .checkbox {
+    position: relative;
+    display: block;
+    min-height: var(--form-line-height);
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.radio label, .checkbox label {
+    min-height: var(--form-line-height);
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+.radio-inline, .checkbox-inline {
+    position: relative;
+    display: inline-block;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: normal;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.radio input[type="radio"],
+.radio-inline input[type="radio"],
+.checkbox input[type="checkbox"],
+.checkbox-inline input[type="checkbox"] {
+    position: absolute;
+    margin-top: 6px;
+    margin-left: -20px;
+}
+
+.radio + .radio, .checkbox + .checkbox {
+    margin-top: -5px;
+}
+
+.radio-inline + .radio-inline, .checkbox-inline + .checkbox-inline {
+    margin-top: 0;
+    margin-left: 10px;
+}
+
+/* Disabled States
+
+/* Unified cursor style for all disabled form elements and labels */
+fieldset[disabled] .form-control,
+fieldset[disabled] .radio label,
+fieldset[disabled] .checkbox label,
+fieldset[disabled] .radio-inline,
+fieldset[disabled] .checkbox-inline,
+.form-control:disabled,
+input[type="radio"]:disabled,
+input[type="checkbox"]:disabled,
+.radio.disabled label,
+.checkbox.disabled label,
+.radio-inline.disabled,
+.checkbox-inline.disabled {
+    cursor: not-allowed;
+}
