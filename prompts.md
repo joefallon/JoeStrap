@@ -1,0 +1,1 @@
+Given the above legacy CSS, update it, and remove obsolete items. It is crucial that the functionality remains the same.
