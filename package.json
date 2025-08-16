@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "cssnano": "^7.1.0",
+    "postcss": "^8.5.6",
+    "postcss-cli": "^11.0.1",
+    "postcss-import": "^16.1.1"
+  },
+  "scripts": {
+    "build:css": "postcss styles/joestrap.input.css -o styles/joestrap.css",
+    "minify:css": "POSTCSS_ENV=production postcss styles/joestrap.css -o styles/joestrap.min.css --env production"
+  }
+}
