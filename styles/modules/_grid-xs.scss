@@ -1,7 +1,0 @@
-/* _grid-xs.scss */
-// Extra small grid
-//
-// Columns, offsets, pushes, and pulls for extra small devices like smart phones.
-@import "../mixins/grid-framework";
-
-@include jtf-make-grid(xs);
