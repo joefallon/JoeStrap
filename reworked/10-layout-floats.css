@@ -1,40 +1,20 @@
 /* 10-layout-floats.css */
 
-/*
- * Refactored and Modernized Utility Styles
- *
- * Key Changes:
- * - Replaced the legacy `clearfix` hack with a modern, minimal equivalent.
- * - Updated `.text-hide` to a modern, accessible "visually-hidden" pattern.
- * - Simplified selectors and grouped related styles for better readability.
- * - Retained `!important` on utilities where forceful overrides are the intended function.
- */
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
 
-/* Layout & Float Utilities
--------------------------------------------------- */
-
-/**
- * Modern clearfix: Contains floats without resorting to extra markup.
- * The `display: flow-root` property is the most modern solution, but the
- * pseudo-element approach is retained here for broader compatibility
- * without requiring changes to the element's display property.
- */
-.clearfix::after {
-    content: "";
-    display: block;
+.clearfix:after {
     clear: both;
 }
 
-/**
- * Centers a block-level element horizontally.
- * Uses `margin-inline` as a modern shorthand for margin-left and margin-right.
- */
 .center-block {
     display: block;
-    margin-inline: auto; /* shorthand for margin-left/right: auto */
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Float utilities - !important is kept as it's their primary function */
 .float-right {
     float: right !important;
 }
@@ -43,39 +23,20 @@
     float: left !important;
 }
 
-
-/* Content Toggling & Visibility Utilities
--------------------------------------------------- */
-
-/* Forcefully show or hide elements by changing the display property */
-.show,
-.visible {
+.show, .visible {
     display: block !important;
 }
 
-.hidden,
-.hide {
+.hidden, .hide {
     display: none !important;
 }
 
-/* Hides an element but preserves its space in the layout */
 .invisible {
     visibility: hidden;
 }
 
-/**
- * Modern, accessible text hiding.
- * Replaces the old `.text-hide` hack. This pattern hides text visually
- * but keeps it available for screen readers.
- */
 .text-hide {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    text-indent: 101%;
     white-space: nowrap;
-    border: 0;
 }

@@ -1,13 +1,5 @@
 /* 12-material-colors.css */
 
-/*
- * Color Utility Classes
- *
- * Generated from a Sass color palette. These classes can be used to apply
- * text and background colors directly to HTML elements. The `!important`
- * rule is used to ensure these utility styles override other styles.
- */
-
 /* Text Color Utilities
 -------------------------------------------------- */
 .text-black { color: #000 !important; }

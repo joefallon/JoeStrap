@@ -1,118 +1,77 @@
 /* 07-labels.css */
 
-:root {
-    /* Base Label Styles */
-    --label-color: #ffffff;
-    --label-font-size: 75%;
-    --label-padding-y: 3px;
-    --label-padding-x: 7px;
-    --label-border-radius: 3px;
-
-    /* Color Variants */
-    --label-default-bg: #757575;
-    --label-default-hover-bg: #5c5c5c;
-
-    --label-primary-bg: #0277bd;
-    --label-primary-hover-bg: #01578b;
-
-    --label-success-bg: #4caf50;
-    --label-success-hover-bg: #3d8b40;
-
-    --label-info-bg: #03a9f4;
-    --label-info-hover-bg: #0286c2;
-
-    --label-warning-bg: #ffa000;
-    --label-warning-hover-bg: #cc8000;
-
-    --label-error-bg: #e53935;
-    --label-error-hover-bg: #cd1e1a;
-}
-
-/* Base Label Style */
 .label {
     display: inline;
-    padding: var(--label-padding-y) var(--label-padding-x);
-    font-size: var(--label-font-size);
+    padding: 3px 7px 3px 7px;
+    font-size: 80%;
     font-weight: bold;
     line-height: 1;
-    color: var(--label-color);
+    color: #ffffff;
     text-align: center;
     white-space: nowrap;
     vertical-align: baseline;
-    border-radius: var(--label-border-radius);
+    border-radius: 3px;
 }
 
-/* Hide the label if it has no content */
 .label:empty {
     display: none;
 }
 
-/* Positional adjustment when inside a button */
 .btn .label {
     position: relative;
     top: -1px;
 }
 
-/* Styles for linked labels */
-a.label:hover,
-a.label:focus {
-    color: var(--label-color);
+a.label:hover, a.label:focus {
+    color: #ffffff;
     text-decoration: none;
     cursor: pointer;
 }
 
-
-/* Label Color Variants */
 .label-default {
-    background-color: var(--label-default-bg);
+    background-color: #757575;
 }
 
-a.label-default:hover,
-a.label-default:focus {
-    background-color: var(--label-default-hover-bg);
+.label-default[href]:hover, .label-default[href]:focus {
+    background-color: #5c5c5c;
 }
 
 .label-primary {
-    background-color: var(--label-primary-bg);
+    background-color: #0277bd;
 }
 
-a.label-primary:hover,
-a.label-primary:focus {
-    background-color: var(--label-primary-hover-bg);
+.label-primary[href]:hover, .label-primary[href]:focus {
+    background-color: #01578b;
 }
 
 .label-success {
-    background-color: var(--label-success-bg);
+    background-color: #4caf50;
 }
 
-a.label-success:hover,
-a.label-success:focus {
-    background-color: var(--label-success-hover-bg);
+.label-success[href]:hover, .label-success[href]:focus {
+    background-color: #3d8b40;
 }
 
 .label-info {
-    background-color: var(--label-info-bg);
+    background-color: #03a9f4;
 }
 
-a.label-info:hover,
-a.label-info:focus {
-    background-color: var(--label-info-hover-bg);
+.label-info[href]:hover, .label-info[href]:focus {
+    background-color: #0286c2;
 }
 
 .label-warning {
-    background-color: var(--label-warning-bg);
+    background-color: #ffa000;
 }
 
-a.label-warning:hover,
-a.label-warning:focus {
-    background-color: var(--label-warning-hover-bg);
+.label-warning[href]:hover, .label-warning[href]:focus {
+    background-color: #cc8000;
 }
 
 .label-error {
-    background-color: var(--label-error-bg);
+    background-color: #e53935;
 }
 
-a.label-error:hover,
-a.label-error:focus {
-    background-color: var(--label-error-hover-bg);
+.label-error[href]:hover, .label-error[href]:focus {
+    background-color: #cd1e1a;
 }
